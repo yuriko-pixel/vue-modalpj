@@ -2,7 +2,7 @@
 <div>
   <h1>{{ title }}</h1>
   <p>Welcome...</p>
-  <teleport to="#modals" v-if="showModal">
+  <teleport v-if="showModal">
     <Modal :heading="heading" :text="text" theme="sale" @close="toggleModal">
       <template v-slot:links>
         <a href="#">sign up now</a>
@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style>
-#app, #modals {
+#app, .modals {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
